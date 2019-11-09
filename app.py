@@ -8,10 +8,7 @@ from werkzeug.utils import secure_filename
 from flask_cors import CORS, cross_origin
 from mongoengine import *
 connect(
-    db="vue_inventory",
-    username="joekenpat",
-    password="?codraxMamba1?",
-    authentication_source="admin"
+    db="vue_inventory"
 )
 def new_drug_uid():
     return ("drg-"+str(uuid.uuid4()).replace('-','')).upper()
